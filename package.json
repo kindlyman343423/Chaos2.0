@@ -1,0 +1,22 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blockchain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node_1": "nodemon --watch dev -e js dev/networkNode.js 3001",
+    "node_2": "nodemon --watch dev -e js dev/networkNode.js 3002",
+    "node_3": "nodemon --watch dev -e js dev/networkNode.js 3003",
+    "node_4": "nodemon --watch dev -e js dev/networkNode.js 3004",
+    "node_5": "nodemon --watch dev -e js dev/networkNode.js 3005"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "^4.16.3",
+    "nodemon": "*",
+    "uuid": "^3.3.2"
+  }
+}
