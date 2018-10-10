@@ -3,7 +3,8 @@ const sha256 = require('sha256');
 function Blockchain(){
     this.chain = [];
     this.pendingTransactions = [];
-    // this.createNewBlock(100,'0','0');
+    
+    this.createNewBlock(100,'0','0'); //genysis block -- first block
 }
 
 //mine a block and a create a new block in a blockchain
@@ -47,17 +48,19 @@ Blockchain.prototype.hashBlock = function(previousBlockHash,currentBlockData,non
     return hash;
 }
 
-
+//security of our blockchain a specific hash starting with 0000 is created
 Blockchain.prototype.proofOfWork = function(previousBlockHash,currentBlockData){
-      let nonce =0;
-      let hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);
-      while(hash.substring(0,4)!=='0000'){
-          nonce++;
-          hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);
-            
-      }
+    let nonce =0;
+    let hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);
+    while(hash.substring(0,4)!=='0000')
+    {
+        nonce++;
+        hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);            
+    }
 
-      return nonce;
+    return nonce;
 }
+
+
 
 module.exports = Blockchain;
