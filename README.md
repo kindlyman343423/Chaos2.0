@@ -3,3 +3,9 @@
 ## DEPENDENCIES
 
 * sha256
+* express
+* nodemon
+
+## OTHERS
+
+* postman (API development environment)
