@@ -25,13 +25,13 @@
 ### CREATE A NEW TRANSACTION
 
 * OPEN YOUR POSTMAN(installed)
-* Enter the url http://localhost:3000/transaction
+* Enter the url ```http://localhost:3000/transaction```
 * Check options
   * Select body
   * Select raw
   * Select JSON
   * Enter the json
-  
+
 ```json
 {
     "amount": 50,
