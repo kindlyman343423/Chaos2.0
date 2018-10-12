@@ -2,7 +2,7 @@
 const Blockchain = require('./blockchain');
 
 const bitcoin = new Blockchain();
-console.log(bitcoin);
+// console.log(bitcoin);
 // bitcoin.createNewBlock(100,'SFDSD4344','232342SLDFS');
 
 // bitcoin.createNewTransaction(200,'ALEXDFFGDF4344','JENNSDGG5445SS');
@@ -40,5 +40,5 @@ const currentBlockData = [
 
 //TESTING PROOF OF DATA returns nonce
 nonce = bitcoin.proofOfWork(previousBlockHash,currentBlockData);
-
+// console.log(nonce);
 console.log(bitcoin.hashBlock(previousBlockHash,currentBlockData,nonce));
