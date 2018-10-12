@@ -1,20 +1,27 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-app.get('/',function(req, res){
-   res.send('Hello world'); 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// app.get('/',function(req, res){
+//     res.send('Hello World')
+// })
+
+app.get('/blockchain',function(req, res){
+
 });
 
-//create new transaction
-// app.post('/transaction',function(req,res){
-
-// });
-
-// //mine or create a new block
-// app.get('/mine',function(req, res){
-
-// });
-
-app.listen(3000,function(){
-    console.log('Listening on port 3000...');
+app.post('/transaction',function(req, res){
+    console.log(req.body);
+    res.send(`The amount of the transaction is ${req.body.amount} bitcoin.`);
 });
+
+app.get('/mine',function(req,res){
+
+});
+
+app.listen(3001,function(){
+    console.log('Listening on port 3000');
+})

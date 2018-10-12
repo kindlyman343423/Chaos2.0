@@ -5,6 +5,7 @@
   "main": "blockchain.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch dev -e js dev/networkNode.js 3000",
     "node_1": "nodemon --watch dev -e js dev/networkNode.js 3001",
     "node_2": "nodemon --watch dev -e js dev/networkNode.js 3002",
     "node_3": "nodemon --watch dev -e js dev/networkNode.js 3003",

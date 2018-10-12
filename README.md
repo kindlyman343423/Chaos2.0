@@ -5,6 +5,7 @@
 * sha256
 * express
 * nodemon
+* body-parser
 
 ## OTHERS
 
